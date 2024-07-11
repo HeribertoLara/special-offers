@@ -1,0 +1,568 @@
+:root {
+    --height-banner-hotel: initial;
+    --height-menu-internal-hotel: initial;
+    --property-color: initial;
+}
+
+html,
+* {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-display: swap;
+}
+
+body {
+    &.o-hidden {
+        position: fixed; 
+        overflow-y: scroll;
+        width: 100%;
+        top: initial;
+    }
+
+    &.menu-fixed-open {
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(0 0 0 / 50%);
+            z-index: 100;
+        }
+    }
+}
+
+
+
+p,
+label,
+button,
+label,
+a,
+span {
+    color: #575656;
+    font-weight: 300;
+
+    @media (max-width: $desktopLS) {
+        font-size: 12px;
+    }
+}
+
+a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+section {
+    margin-bottom: 6rem;
+    padding: 0 0 5rem;
+    scroll-margin-top: 15rem;
+
+    @media (max-width: $desktopLS) {
+        margin-bottom: 3%;
+        padding: 0 0 3%;
+    }
+
+    @media (max-width: $desktop) {
+        margin-bottom: 1%;
+        padding: 0 0 1%;
+    }
+}
+
+.container {
+    @media (min-width: $desktopXXL) {
+        max-width: 1640px;
+    }
+}
+
+h2,
+h1 {
+    font-weight: 300;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    @media (max-width: $desktopLS) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: $desktop) {
+        font-size: 1.3rem;
+    }
+
+    @media (max-width: $tablet) {
+        font-size: 15px;
+    }
+
+    .content-title-comp,
+    b,
+    span,
+    p {
+        font-size: 3.2rem;
+        display: block;
+        font-weight: 300;
+
+        @media (max-width: $desktopLS) {
+            font-size: 2.9rem;
+        }
+
+        @media (max-width: $desktop) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: $tablet) {
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+}
+
+.content-titles {
+    font-weight: 300;
+    color: black;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: $desktopLS) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: $desktop) {
+        font-size: 1.3rem;
+    }
+
+    @media (max-width: $tablet) {
+        font-size: 15px;
+    }
+}
+
+.content-title,
+.our-residences-title {
+
+    &.destination__Card,
+    &.special_offers,
+    &.contactUs {
+
+        h2,
+        h1 {
+            text-align: start;
+
+            span {
+                color: black;
+            }
+        }
+    }
+
+    &.contactSpecial {
+        margin-bottom: 5rem;
+
+        @media (max-width: $desktop) {
+            margin-bottom: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        h2,
+        h1 {
+            font-weight: 300;
+            color: black;
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+
+            @media (max-width: $desktopLS) {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: $desktop) {
+                font-size: 1.3rem;
+            }
+
+            @media (max-width: $tablet) {
+                font-size: 15px;
+            }
+
+            .content-title-comp,
+            b,
+            span {
+                font-size: 3.2rem;
+                display: block;
+                font-weight: 300;
+                color: black;
+
+                @media (max-width: $desktopLS) {
+                    font-size: 2.9rem;
+                }
+
+                @media (max-width: $desktop) {
+                    font-size: 2.5rem;
+                }
+
+                @media (max-width: $tablet) {
+                    font-size: 25px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &.reverse-title{
+
+        h1,h2{
+            color: black;
+            font-size: 70px;
+            display: block;
+            font-weight: 500;
+    
+            @media (max-width:$desktopXXL) {
+                font-size: 48px;
+            }
+    
+            @media (max-width: $desktop) {
+                font-size: 30px;
+            }
+    
+            // @media (max-width: $tablet) {
+    
+            //     font-size: 25px;
+            //     margin: 0;
+            // }  
+    
+            span{
+                font-weight: 500;
+                color: $gray;
+                font-size: 20px;
+                text-align: center;
+    
+                // @media (max-width: $desktopLS) {
+                //     font-size: 20px;
+                // }
+    
+                @media (max-width: $desktop) {
+                    font-size: 14px;
+                }
+    
+                // @media (max-width: $tablet) {
+                //     font-size: 15px;
+                // }
+            }
+        }
+        
+        
+
+        
+    }
+
+    h2,
+    h1 {
+        font-weight: 300;
+        color: black;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (max-width: $desktopLS) {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: $desktop) {
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: $tablet) {
+            font-size: 15px;
+        }
+
+        .content-title-comp,
+        b,
+        span {
+            color: black;
+            font-size: 3.2rem;
+            display: block;
+            font-weight: 300;
+
+            @media (max-width: $desktopLS) {
+                font-size: 2.9rem;
+            }
+
+            @media (max-width: $desktop) {
+                font-size: 2.5rem;
+            }
+
+            @media (max-width: $tablet) {
+                font-size: 25px;
+                margin: 0;
+            }
+        }
+    }
+
+    font-weight: 300;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+
+    @media (max-width: $desktopLS) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: $desktop) {
+        font-size: 1.3rem;
+    }
+
+    @media (max-width: $tablet) {
+        font-size: 15px;
+    }
+
+    .content-title-comp,
+    b,
+    span {
+        color: black;
+        font-size: 3.2rem;
+        display: block;
+        font-weight: 300;
+
+        @media (max-width: $desktopLS) {
+            font-size: 2.9rem;
+        }
+
+        @media (max-width: $desktop) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: $tablet) {
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+}
+
+.content-subtitle {
+    font-size: 20px;
+    color: $gray;
+    margin: 0.5rem 0 1rem;
+    font-weight: 500;
+    display: block;
+
+    @media (max-width: $desktop) {
+        font-size: 16px;
+    }
+
+    &.contactUs {
+        font-size: 16px;
+    }
+}
+
+.content-description,
+.content-description p {
+    font-size: 14px;
+    color: $gray;
+    margin: 0.5rem 0 1rem;
+    font-weight: 200;
+    display: block;
+    line-height: 1.7rem;
+
+    @media (max-width: $desktopLS) {
+        font-size: 12px;
+    }
+}
+
+span {
+    font-size: 14px;
+
+    @media (max-width: $desktopLS) {
+        font-size: 12px;
+    }
+}
+
+.content-actions {
+
+    .btn,
+    a {
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 45px;
+        border: 1px solid #575656;
+        color: black;
+        text-transform: uppercase;
+        border-radius: 0;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+
+        &.btn-reserve {
+            background-color: black;
+            color: white;
+        }
+
+        @media (max-width: $desktop) {
+            margin: 10px 0;
+        }
+    }
+}
+
+
+
+.font-bold {
+    font-weight: 600;
+}
+
+
+.custom-scrollbar {
+    &::-webkit-scrollbar {
+        width: 4px;
+
+        @media (max-width: $mobile) {
+            width: 0;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #aaaaaa;
+
+        @media (max-width: $mobile) {
+            background-color: transparent;
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        // background-color: black;
+        border-radius: 6px;
+        border: 2px solid black;
+
+        @media (max-width: $mobile) {
+            border: 0px solid transparent;
+        }
+    }
+}
+
+// Buttons
+.btn-black-primary,
+.btn-white-primary {
+    border: 0.5px solid $gray;
+    border-radius: 0;
+    padding: 0.8rem 1.2rem;
+    text-transform: uppercase;
+    font-size: 15px;
+    position: relative;
+    margin-top: 15px;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 500;
+    outline: none;
+    &:focus{
+        box-shadow: none;
+    }
+    @media (max-width: $tablet) {
+        width: 100%;
+        padding: 1rem 1.2rem;
+    }
+}
+
+.btn-black-primary {
+    color: white;
+    background-color: black;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 100%;
+        background: white;
+        transition: width 0.5s ease-in-out;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: black;
+        font-weight: 700;
+
+        &:after {
+            width: 110%;
+            background: white;
+        }
+    }
+}
+
+.btn-white-primary {
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 100%;
+        background: black;
+        z-index: -1;
+        transition: width 0.5s ease-in-out;
+    }
+
+    &:hover {
+        color: white;
+        font-weight: 700;
+
+        &:after {
+            width: 110%;
+            background: black;
+        }
+    }
+}
+
+.btn-link-transparent {
+    height: 55px;
+    border: 1px solid $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    font-size: 1.14rem;
+    font-weight: $semibold;
+    text-decoration: none;
+}
+
+.btn-back {
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 400;
+    padding-left: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../../public/resourses/assets/prev_arrow.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: left;
+    }
+}
+
+.padding-properties-home {
+    padding-top: var(--height-banner-hotel);
+}

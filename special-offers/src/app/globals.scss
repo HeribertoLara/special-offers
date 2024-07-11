@@ -1,0 +1,60 @@
+/*
+* Colors
+*/
+$gray: #575656;
+$grayLight: #F5F5F5;
+$darkGray: #272727;
+$black: #000000;
+$black-2: #333333;
+$white-0: #ffffff;
+$white-1: #eeeeee;
+$brown: rgba(55, 33, 1, 40%);
+$red: #D10C00;
+$soft-green: #99c4bc;
+$soft-gray:#ECE9E5;
+/*
+* FontWeight
+*/
+$light: 200;
+$regular: 300;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+
+/*
+* Media Queries
+*/
+$mobileSmall: 300px !default;
+$mobileXs: 350px !default;
+$mobileXss: 375px !default;
+$mobileS: 480px !default;
+$mobile: 624px !default;
+$tablet: 768px !default;
+$desktop: 1024px !default;
+$desktopL: 1200px !default;
+$desktopLS: 1440px !default;
+$desktopXL: 1550px !default;
+$desktopXXL: 1900px !default;
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+

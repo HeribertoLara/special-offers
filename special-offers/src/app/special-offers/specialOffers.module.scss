@@ -1,0 +1,36 @@
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.containerGridCards {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 25vw);
+  justify-content: center; 
+  align-items: center;     
+  
+  .FlightHotelCard {
+    background: white;
+    padding: 16px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+    /* max-width: 100%;
+    height: auto;
+    display: block; */
+  }
+}

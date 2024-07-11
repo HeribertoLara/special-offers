@@ -1,0 +1,109 @@
+.card {
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figure {
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  font-size: 0.875rem;
+  color: #333;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #333;
+}
+
+.infoGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  justify-items: start; 
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.infoItem p {
+  margin: 0;
+  margin-left: 4px;
+}
+
+.originalCost {
+  text-decoration: line-through;
+  color: red;
+}
+
+.nonstopInfo {
+  font-weight: bold;
+}
+
+.bookingButtonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.bookingButton {
+  background: #fff; /* color de fondo */
+  color: #000; /* color de fuente */
+  border: 2px solid #000; /* tamaño y color de borde */
+  padding: 16px 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+
+  &:before, &:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color: #000; /* color de fondo hover */
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:after {
+    left: 100%;
+  }
+
+  &:hover {
+    color: #fff; /* color de fuente hover */
+  }
+
+  &:hover:before {
+    left: 0;
+  }
+
+  &:hover:after {
+    left: 50%;
+  }
+}

@@ -1,0 +1,21 @@
+@use '../../globals.scss' as *;
+
+.containerTitle {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: $regular;
+}
+
+.date {
+  color: $darkGray; // Usa la variable de color gris oscuro
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}

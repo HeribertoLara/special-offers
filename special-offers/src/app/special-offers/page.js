@@ -7,6 +7,7 @@ import style from './specialOffers.module.scss';
 
 const PageContent = () => {
     const { data, loading, error } = useContext(OfferFlightContext);
+    
 
     if (loading) {
         return <div>Cargando...</div>;

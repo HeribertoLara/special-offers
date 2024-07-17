@@ -1,13 +1,20 @@
 .card {
   background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.51);
   padding: 16px;
   margin-bottom: 16px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
 }
+
+.card:hover {
+  transform: scale(1.02) translateZ(1px); /* Ajusta el valor de scale y translateZ según sea necesario */
+}
+
 
 .figure {
   margin: 0 0 16px;
@@ -18,19 +25,29 @@
   max-width: 100%;
   height: auto;
   display: block;
+  transition: box-shadow 0.3s ease; /* Transición suave para el efecto */
+  border-radius: 5px;
 }
 
 .caption {
   font-size: 0.875rem;
-  color: #333;
-  margin-top: 8px;
+  color: #1f1e1e;
+  margin-top: 14px;
   width: 100%;
+  background: #e9e9e9;
+  border-radius: 5px;
 }
 
 .icon {
   margin-right: 8px;
-  color: #333;
+  color: #000000; /* Color inicial */
+ 
 }
+
+.icon:hover {
+  color: #9c98b3; /* Color al hacer hover */
+}
+
 
 .infoGroup {
   display: grid;
@@ -38,14 +55,23 @@
   gap: 16px;
   margin-bottom: 16px;
   width: 100%;
-  justify-items: start; 
+  text-transform: uppercase;
 }
 
 .infoItem {
+  text-align: center; /* Centra el texto horizontalmente */
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  background-color: #f0f0f0; /* Color de fondo */
+  padding: 10px;
+ 
 }
+
+.infoItem:nth-child(odd) {
+  justify-self: end; /* Alinea los elementos impares a la derecha */
+}
+
 
 .infoItem p {
   margin: 0;
@@ -69,15 +95,17 @@
 }
 
 .bookingButton {
-  background: #fff; /* color de fondo */
+  background: #8DC6BC; /* color de fondo */
   color: #000; /* color de fuente */
-  border: 2px solid #000; /* tamaño y color de borde */
-  padding: 16px 20px;
+  border: 0px solid #000; /* tamaño y color de borde */
+  padding: 16px 40px;
   position: relative;
   z-index: 1;
   overflow: hidden;
   display: inline-block;
   transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  text-transform: uppercase;
 
   &:before, &:after {
     content: "";

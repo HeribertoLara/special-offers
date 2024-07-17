@@ -7,7 +7,7 @@ const OfferFlightContext = createContext();
 
 const urls = [
     'https://www.reservhotel.com/hotel_air_tools/10815.json',
-    /* 'https://www.reservhotel.com/hotel_air_tools/10816.json', */
+ /* 'https://www.reservhotel.com/hotel_air_tools/10816.json', */
     'https://www.reservhotel.com/hotel_air_tools/10817.json',
     'https://www.reservhotel.com/hotel_air_tools/10818.json',
     'https://www.reservhotel.com/hotel_air_tools/10983.json'
@@ -22,9 +22,21 @@ const OfferFlightProvider = ({ children }) => {
         const fetchData = async () => {
             try {
                 const responses = await Promise.all(urls.map(url => axios.get(url)));
-                const allData = responses.map(response => response.data);
-                
-                setData(allData);
+                let allData = responses.map(response => response.data);
+
+                // Aplanar el array de arrays en un solo array de vuelos
+                allData = allData.flat();
+
+                // Eliminar duplicados basado en booking_url
+                const uniqueFlights = allData.reduce((unique, flight) => {
+                    if (!unique.some(item => item.booking_url === flight.booking_url)) {
+                        unique.push(flight);
+                    }
+                    return unique;
+                }, []);
+
+
+                setData(uniqueFlights);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching the data:', error);
